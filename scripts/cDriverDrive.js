@@ -17,7 +17,7 @@ function getLibraryInfo () {
   return {
     info: {
       name:'cDriverDrive',
-      version:'2.1.0',
+      version:'2.2.0',
       key:'Ma__4vH--nQ_FPsuNF1BFuyz3TLx7pV4j',
       share:'https://script.google.com/d/1ss0gwqczeLddH0pqwzB-VntGbMZzEh3DgUMwCpMYAhTGqXJFkZzBihd4/edit?usp=sharing',
       description:'driver for DRIVE dbabstraction'
@@ -226,6 +226,14 @@ var DriverDrive = function (handler,tableName,id,DriveOb) {
     return delegate.query(queryOb,queryParams,keepIds);
   };
   
+  /**
+   * DriverMemory.removeById()
+   * @param {string} keys key to remove
+   * @return {object} results from selected handler
+   */ 
+  self.removeByIds = function (keys) {
+    return delegate.removeByIds (keys,'key');
+  };
   
   /**
    * DriverDrive.remove()
@@ -266,7 +274,7 @@ var DriverDrive = function (handler,tableName,id,DriveOb) {
   };
   
   self.getGuts = function (keys) {
-    return self.getMem().get ( keys,keepIds,'key')
+    return self.getMem().get ( keys,true,'key')
   };
    /**
    * Driver.update()

@@ -1,5 +1,5 @@
 # Google Apps Script Project: cDriverDrive
-This repo (cDriverDrive) was automatically updated on 15 September 2015 11:47:54 BST by GasGit
+This repo (cDriverDrive) was automatically updated on 28 September 2015 17:43:01 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project cDriverDrive
@@ -23,8 +23,6 @@ cDriverMemory| cDriverMemory|M96uVZRXXG_RY3c2at9V6tSz3TLx7pV4j|10|no|[here](libr
 cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|25|no|[here](libraries/cUseful "library source")
 cDelegateMemory| cDelegateMemory|MyIN8WHN1Uf3EG-obHsjrAyz3TLx7pV4j|10|no|[here](libraries/cDelegateMemory "library source")
 ### Enabled Google Services
-*library*|*identifier*|*version*
---- | --- | --- 
-Drive API| Drive|v2
+no libraries discovered
 ###Need more detail ?
 You can see [full project info as json here](info.json)

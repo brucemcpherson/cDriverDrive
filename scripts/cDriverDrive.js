@@ -148,7 +148,7 @@ var DriverDrive = function (handler,tableName,id,DriveOb) {
   self.writeContent = function (content) {
     var file = self.getDriveFile();
     if (!file) {
-      file = handle.createFile(siloId,content,MimeType.JSON);
+      file = handle.createFile(siloId,content,MimeType.PLAIN_TEXT);
     }
     file.setContent(JSON.stringify(content));
     return file;
@@ -159,7 +159,14 @@ var DriverDrive = function (handler,tableName,id,DriveOb) {
   */
   self.getContent = function () {
     var file = self.getDriveFile();
-    return file ? delegate.getContentSimpleKeys( JSON.parse(file.getBlob().getDataAsString()) ) : null;
+    if (file) {
+      var content = file.getBlob().getDataAsString();
+      return content ? delegate.getContentSimpleKeys( JSON.parse(content)) : null;
+    }
+    else {
+      return null;
+    }
+    ///return file ? delegate.getContentSimpleKeys( JSON.parse(file.getBlob().getDataAsString()) ) : null;
   };
 
   
